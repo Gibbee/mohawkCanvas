@@ -90,3 +90,15 @@
 		font-size: 16px;
 	}
 }
+
+/* Media query for smaller screens (576px breakpoint) */
+@media (max-width: 576px) {
+	.templateHeroOverlay {
+		position: static;
+		/* Make the text appear below the image */
+		max-width: 100%;
+		/* Expand the text to full width */
+		text-align: center;
+		/* Center the text on smaller screens */
+	}
+}
