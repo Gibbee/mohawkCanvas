@@ -1,104 +1,486 @@
 @import url("https://use.typekit.net/eac0khv.css");
 
-.templateCode {
-	max-width: 100%;
-	overflow: hidden;
+/* Hide modal background so its still accessible */
+.modal-backdrop.show {
+	display: none;
 }
 
-.templateCode p {
-	font-family: verdana-pro, sans-serif;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 14px;
+/* Make logo area taller for Readspeaker icon to fit in the top left corner*/
+.ic-app-header__logomark {
+	margin-bottom: 40px;
 }
 
-.templateHeroOverlay h2 {
-	font-family: verdana-pro, sans-serif !important;
-	font-weight: 900;
-	font-style: normal;
-	font-size: 52px !important;
-}
-
-.templateContent h2 {
-	font-family: verdana-pro, sans-serif !important;
-	font-weight: 900;
-	font-style: normal;
-	font-size: 46px !important;
-}
-
-
-/* Style for the hero container */
-.templateHeroContainer {
+.hero-container {
 	position: relative;
 	max-width: 100%;
 	overflow: hidden;
-	/* Prevent horizontal overflow */
 }
 
-/* Style for the hero image */
-.templateHeroImage {
+.hero-image {
 	width: 100%;
 	height: auto;
 	display: block;
 }
 
-/* Container for the text overlay */
-.templateHeroOverlay {
+/* Style for the overlay */
+.overlay {
 	position: absolute;
 	bottom: 0;
-	left: 50%;
-	/* Center the text horizontally */
-	transform: translateX(-50%);
-	/* Center the text horizontally */
-	background-color: rgba(0, 0, 0, 0.7);
+	left: 0;
+	right: 0;
+	width: 40%;
+	background-color: rgba(0, 96, 104, 0.76);
 	color: #fff;
-	padding: 20px;
-	max-width: 50%;
-	/* Adjust the maximum width as needed */
 	text-align: center;
-	/* Center the text inside the overlay */
+	padding: 20px;
+	margin: 0 auto;
+	display: block;
 }
 
-.templateContent {
+.overlay h2 {
+	font-size: 46px;
+	font-family: verdana-pro, sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+.overlay-home {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 60%;
+	background-color: rgba(0, 96, 104, 0.76);
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;
+	display: block;
+}
+
+.overlay-home h2 {
+	font-size: 30px;
+	font-family: verdana-pro, sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+.template-content {
 	max-width: 980px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-.templateCardContainer {
+.template-content p {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 32px;
+	padding-bottom: 26px;
+}
+
+.template-content li {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 32px;
+	padding-bottom: 26px;
+}
+
+.template-content ul {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 26px;
+	padding-bottom: 26px;
+	padding-left: 56px;
+}
+
+.template-content h2 {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 32px;
+}
+
+.template-content h3 {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 28px;
+}
+
+.template-start {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
-.templateCard {
+.square-button {
+	display: inline-block;
+	width: 220px;
+	height: 60px;
+	background-color: #A5D2C6;
+	color: #000;
+	text-align: center;
+	line-height: 20px;
+	text-decoration: none;
+	font-size: 14px;
+	border-radius: 8px;
+	padding-top: 20px;
+}
+
+.square-button-center {
+	display: inline-block;
+	position: relative;
+	width: 260px;
+	height: 60px;
+	background-color: #A5D2C6;
+	color: #000;
+	text-align: center;
+	line-height: 20px;
+	text-decoration: none;
+	font-size: 14px;
+	border-radius: 8px;
+	padding-top: 20px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.square-button-center:hover {
+	background-color: #006068;
+	color: #fff;
+}
+
+a.square-button-center {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+.square-button:hover {
+	background-color: #006068;
+	color: #fff;
+}
+
+a.square-button {
+	font-family: verdana-pro, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.line {
+	border-top: 1px solid #ccc;
+	margin: 30px 0px 40px 0px;
+}
+
+/* Float three columns side by side */
+
+.two-column-horizontal-left {
+	float: left;
 	width: 30%;
-	margin: 1%;
-	background-color: #f0f0f0;
-	padding: 20px;
-	box-sizing: border-box;
+	padding: 0 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin: 0 auto;
+}
+
+.two-column-horizontal-right {
+	float: left;
+	width: 64%;
+	padding: 0 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin: 0 auto;
+}
+
+.template-two-card-container-mockone {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(165, 210, 198, 0.2);
+}
+
+.two-column {
+	float: left;
+	width: 45%;
+	padding: 0 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.line-card {
+	border-top: 1px solid #ccc;
+	margin-right: 6%;
+	margin-left: 6%;
+}
+
+/* Clear floats after the columns */
+
+.template-two-card-container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.template-two-card-container-mockone:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.template-two-card-container {
+	margin-top: 30px;
 }
 
 
+/* Style the counter cards */
+.card-icon {
+	padding: 20px 0px 0px 0px;
+	width: 80px;
+}
 
-.templateCardContainer {}
+.card-icon-teams {
+	padding: 20px 0px 0px 0px;
+	width: 180px;
+}
+
+.card {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: none !important;
+}
+
+.card-horizontal-left {
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 250px;
+}
+
+.card-horizontal-right {
+
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 250px;
+
+}
+
+.card-vertical-right {
+
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: block;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 250px;
+
+}
+
+.card-top {
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-align: center;
+}
+
+.card-bottom {
+	background-color: #fff;
+	padding: 20px;
+}
+
+.centered-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #a5d2c6;
+	height: 90px;
+	margin-bottom: 20px;
+}
+
+.centered-header-icon {
+	width: 80px;
+	padding-right: 20px;
+}
+
+/* Dropdowns */
+.w3-show-block,
+.w3-show {
+	display: block !important
+}
+
+.w3-show-inline-block {
+	display: inline-block !important
+}
+
+.w3-dropdown-click {
+	width: 100%
+}
+
+.w3-dropdown-click {
+	min-width: 100%
+}
+
+.w3-dropdown-click,
+.w3-button {
+	width: 100%;
+	text-align: left;
+	padding: 8px 16px
+}
+
+.w3-dropdown-click {
+	position: static;
+	float: left
+}
+
+.w3-button:hover {
+	color: #000 !important;
+	background-color: #ccc !important
+}
+
+.w3-button:focus {
+	color: #000 !important;
+	background-color: pink !important
+}
+
+.w3-button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: white;
+	background-color: darkred;
+	text-align: left;
+	cursor: pointer;
+	white-space: nowrap
+}
+
+.w3-dropdown-content {
+	cursor: auto;
+	color: #000;
+	background-color: #fff;
+	display: block;
+	position: absolute;
+	min-width: 160px;
+	margin: 0;
+	padding: 0;
+	z-index: 1
+}
+
+.w3-bar-block {
+	min-width: 100%;
+	width: 100%;
+	text-align: left;
+	padding: 8px 16px
+}
+
+.w3-black,
+.w3-hover-black:hover {
+	color: #fff !important;
+	background-color: #000 !important
+}
+
+.w3-dropdown-content {
+	display: block
+}
+
+.w3-bar-block {
+	width: 100%;
+	display: block;
+	padding: 8px 16px;
+	text-align: left;
+	border: none;
+	white-space: normal;
+	float: none;
+	outline: 0;
+	text-align: left;
+}
+
+.w3-bar-item {
+	width: 100%;
+	display: block;
+	padding: 8px 16px;
+	text-align: left;
+	border: none;
+	white-space: normal;
+	float: none;
+	outline: 0
+}
 
 
-/* Media query for smaller screens - 600px breakpoint */
-@media (max-width: 600px) {
-	.templateContent h2 {
-		font-size: 16px;
+/* Media Queries All */
+
+/* Mid Point Break */
+@media screen and (max-width: 1200px) {
+	.overlay h2 {
+		font-size: 28px;
+	}
+
+	.overlay {
+		width: 80%;
 	}
 }
 
+
+
+@media screen and (max-width: 992px) {
+	.overlay-home h2 {
+		font-size: 28px;
+		font-family: verdana-pro, sans-serif;
+		font-weight: 900;
+		font-style: normal;
+	}
+}
+
+
+/* Mobile App Code */
 /* Media query for smaller screens (576px breakpoint) */
-@media (max-width: 576px) {
-	.templateHeroOverlay {
+
+@media only screen and (max-width: 576px) {
+	.overlay {
 		position: static;
-		/* Make the text appear below the image */
-		max-width: 100%;
-		/* Expand the text to full width */
+		width: 98%;
 		text-align: center;
-		/* Center the text on smaller screens */
+		padding: 6px;
+		background: none;
+	}
+
+	.overlay h2 {
+		font-size: 26px;
+		font-family: verdana-pro-condensed, sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		color: #363636;
+	}
+
+	.two-column {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
 	}
 }
